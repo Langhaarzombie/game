@@ -20,6 +20,17 @@ public class Help {
 						   " goto - go to a certain building\n" +
 						   " learn - learn a citizen a job\n" +
 						   " exit - close program\n");
+		// generate the buildings
+		
+..........................
+
+
+
+
+
+
+
+
 	}
 
 	/**
