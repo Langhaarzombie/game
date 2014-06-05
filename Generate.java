@@ -26,4 +26,17 @@ public class Generate {
 		// for school
 		buildings[5]=new Buildings("School", importBuilding.getData(5,0), importBuilding.getData(5,1), importBuilding.getData(5,2), importBuilding.getData(5,3), importBuilding.getData(5,4), importBuilding.getData(5,5), importBuilding.getData(5,6), importBuilding.getData(5,7), importBuilding.getData(5,8), importBuilding.getData(5,9), importBuilding.getData(5,10), importBuilding.getData(5,11));
 	}
+	
+	//trying some improvements
+	/*public void assignValues (Buildings [] buildings)
+	{
+		String [] jobs={"Forester", "Clay Pit", "Forge", "Cottage", "Castle", "School"};
+		
+		for (int i=0; i<buildings.length; i++)
+		{
+			for n=i; n<buildings.length; i++)
+			{
+				buildings[i]=new Buildings(jobs[i])
+		}
+	}*/
 }
