@@ -1,4 +1,4 @@
-package inputOutput;
+package game;
 import java.util.*;
 
 /**
@@ -194,5 +194,12 @@ public class CasePrintouts
 		}
 
 		System.out.println("Just kidding ;)");
+	}
+	
+	public void credits()
+	{
+		System.out.println("Game made by Michael Bartl, Jonas Neumair and Maximilian Meyer-Mölleringhof\n\nIdea by Michael Bartl, Jonas Neumair and Maximilian Meyer-Mölleringhof\n\n" +
+						   "Texts by Michael Bartl, Jonas Neumair and Maximilian Meyer-Mölleringhof\n\n");
+							
 	}
 }
