@@ -52,6 +52,7 @@ public class Cases {
 		{
 			System.out.println();
 			String choice = in.next();
+			choice=choice.toLowerCase();
 
 			switch (choice)
 			{
