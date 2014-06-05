@@ -1,4 +1,4 @@
-package Buildings;
+package game;
 
 public final class ImportAmountOfCostsAndPlus {
 

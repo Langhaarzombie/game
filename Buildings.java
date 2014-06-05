@@ -1,4 +1,4 @@
-package Buildings;
+package game;
 
 // buildings are manly used to calculate the materials. if you build one only the materials are subtracted and added and there is no new object created in fact. 
 // the buildings are: Forester, Clay Pit, Forge, Cottage, School, Church and Castle

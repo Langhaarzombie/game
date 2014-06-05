@@ -1,12 +1,12 @@
-package Buildings;
+package game;
 
-public class Generating {
+public class Generate {
 
 	public Buildings[] buildings;
 
 	private ImportAmountOfCostsAndPlus importBuilding;
 
-	public Generating(){
+	public Generate(){
 	    this.buildings=new Buildings[6];
 	    importBuilding=new ImportAmountOfCostsAndPlus();
 		assignValuesBuildings(this.buildings);

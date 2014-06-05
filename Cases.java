@@ -1,4 +1,4 @@
-package inputOutput;
+package game;
 
 import java.util.Scanner;
 
@@ -88,6 +88,7 @@ public class Cases {
 				case "learnpotter": input.learnpotter(); break;
 				case "electking": input.electking(); break;
 				case "clear": input.clear(); break;
+				case "creedits": input.credits(); break;
 				default: System.out.println(choice + " is not a command"); break;
 			}//switch
 		}//while

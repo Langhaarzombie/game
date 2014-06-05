@@ -1,4 +1,4 @@
-package inputOutput;
+package game;
 
 /**
  * class to see all the commands/cases that the user can type in
