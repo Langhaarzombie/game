@@ -22,7 +22,7 @@ public class Help {
 						   " exit - close program\n");
 		// generate the buildings
 		
-..........................
+//..........................
 
 
 

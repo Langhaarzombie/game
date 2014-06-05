@@ -71,7 +71,7 @@ public class Cases {
 				case "resources": input.resources(); break;
 				case "goto": help.goTo(); break;
 				case "gotohouse": input.goToHouse(); break;
-				case "gotoforester ": input.goToForesterHouse(); break;
+				case "gotoforester": input.goToForesterHouse(); break;
 				case "gotomine": input.goToMine(); break;
 				case "gotoforge": input.goToForge(); break;
 				case "gotoclaypit": input.goToClayPit(); break;
