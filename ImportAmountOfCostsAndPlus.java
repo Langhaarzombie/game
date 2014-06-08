@@ -1,4 +1,4 @@
-package game;
+ 
 
 public final class ImportAmountOfCostsAndPlus {
 
@@ -20,20 +20,22 @@ public final class ImportAmountOfCostsAndPlus {
 
 	private static int[][] importBuilding;
 
-    private final int[] forester={9, 0, 0, 5, 5, 3, 15, 0, 0, 0, 0, 0};
+    private final int[] forester={6, 0, 0, 3, 3, 18, 0, 0, 0, 0, 0, 0};
 
-    private final int[] clayPit={5, 8, 0, 7, 8, 0, 17, 0, 0, 0, 0, 0};
+    private final int[] clayPit={3, 5, 0, 5, 6, 0, 15, 0, 0, 0, 0, 0};
 
-    private final int[] forge={7, 5, 5, 9, 9, 0, 0, 11, 0, 0, 0, 0};
+    private final int[] forge={5, 2, 3, 6, 6, 0, 0, 11, 0, 0, 0, 0};
 
-    private final int[] cottage={4, 3, 1, 4, 2, 0, 0, 0, 0, 8, 0, 0};
+    private final int[] cottage={4, 3, 1, 4, 2, 0, 0, 0, 0, 9, 0, 0};
 
-    private final int[] castle={19, 26, 17, 34, 24, 0, 0, 0, 2, 3, 0, 0};
+    private final int[] castle={12, 16, 9, 14, 19, 0, 0, 0, 1, 4, 0, 0};
 
-    private final int[] school={12, 9, 5, 10, 13, 0, 0, 0, 0, 0, 2000, 0};
+    private final int[] school={9, 6, 4, 7, 9, 0, 0, 0, 0, 0, 2000, 0};
+    
+    private final int[] barracks={7, 4, 3, 5, 2, 0, 0, 0, 2, 0, 1000, 0};
 
     public ImportAmountOfCostsAndPlus(){
-    	importBuilding=new int[6][12];
+    	importBuilding=new int[7][12];
         
     	// forester
     	for(int i=0;i<12;i++){
@@ -64,6 +66,11 @@ public final class ImportAmountOfCostsAndPlus {
     	for(int i=0;i<12;i++){
     		importBuilding[5][i]=school[i];
     	}
+    	
+    	// barracks
+    	for(int i=0;i<12;i++){
+    	    importBuilding[6][i]=barracks[i];
+    	   }
     }
     
     public static int getData(int firstIndex, int secondIndex){
