@@ -27,10 +27,13 @@ public class User
 							"Please press any character to continue");
 		System.out.println();
 
-		String anykey=sc.next();
 
 		while (!goOn)
 		{
+
+		String anykey=sc.next();
+
+
 			if (anykey != "") 
 				{
 					goOn=true;
