@@ -7,14 +7,21 @@ import java.util.*;
 import java.io.*;
 public class User
 {    
-    public static Buildings[] buildings;
+    public static Forester forester;
+    public static ClayPit clayPit;
+    public static Forge forge;
+    public static School school;
+    public static Castle castle;
+    public static Cottage cottage;
+    public static Barracks barracks;
+    
     public static int[] materials;
     private Generating generate;
 
 	public User()
 	{
 		Scanner sc=new Scanner (System.in);
-		new Generating(this.buildings);
+		new Generating(this.forester, this. clayPit, this.forge, this.school, this.castle,this.cottage, this.barracks);
 		materials=new int[5];
 		for(int i=0;i<materials.length;i++){
 		    materials[i]=20;
@@ -24,16 +31,13 @@ public class User
 
 		System.out.println ("Welcome to Texitscha! A game about nothing...\n" + 
 							"Created by Max, Michael and Jonas\n" +
-							"Please press any character to continue");
+							"Please key in any character to continue");
 		System.out.println();
-
-
-		while (!goOn)
-		{
 
 		String anykey=sc.next();
 
-
+		while (!goOn)
+		{
 			if (anykey != "") 
 				{
 					goOn=true;
