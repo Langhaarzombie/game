@@ -16,7 +16,6 @@ public class Cases {
         {
             System.out.println();
             String choice = in.next();
-
             switch (choice)
             {
                 case "help": Help.printhelps(); break;
