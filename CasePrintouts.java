@@ -18,37 +18,37 @@ public class CasePrintouts
     //building something
     public static void buildCottage()
     {
-        User.buildings[3].newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.buildings[5].getSpecial1(), User.buildings[4].getPlusGold());
+        User.cottage.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getSpecial1(), User.castle.getPlusGold());
     }
 
     public static void buildForesterHouse()
     {
-        User.buildings[0].newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.buildings[5].getSpecial1(), User.buildings[4].getPlusGold());
+        User.forester.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getSpecial1(), User.castle.getPlusGold());
     }
 
     public static void buildForge()
     {
-        User.buildings[2].newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.buildings[5].getSpecial1(), User.buildings[4].getPlusGold());
+        User.forge.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getSpecial1(), User.castle.getPlusGold());
     }
 
     public static void buildClayPit()
     {
-        User.buildings[1].newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.buildings[5].getSpecial1(), User.buildings[4].getPlusGold());
+        User.clayPit.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getSpecial1(), User.castle.getPlusGold());
     }
 
     public static void buildSchool()
     {
-        User.buildings[5].newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.buildings[5].getSpecial1(), User.buildings[4].getPlusGold());
+        User.school.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getSpecial1(), User.castle.getPlusGold());
     }
 
     public static void buildCastle()
     {
-        User.buildings[4].newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.buildings[5].getSpecial1(), User.buildings[4].getPlusGold());
+        User.castle.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getSpecial1(), User.castle.getPlusGold());
     }
     
     public static void buildBarracks()
     {
-        User.buildings[6].newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.buildings[5].getSpecial1(), User.buildings[4].getPlusGold());
+        User.barracks.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getSpecial1(), User.castle.getPlusGold());
     }
 
     public static void resources()
@@ -60,43 +60,43 @@ public class CasePrintouts
     public static void goToCottage()
     {
         System.out.println("Information about cottage:");
-        User.buildings[3].getInfo();
+        User.cottage.getInfo();
     }
 
     public static void goToForesterHouse()
     {
         System.out.println("Information about forester:");
-        User.buildings[0].getInfo();
+        User.forester.getInfo();
     }
 
     public static void goToForge()
     {
         System.out.println("Information about forge:");
-        User.buildings[2].getInfo();
+        User.forge.getInfo();
     }
 
     public static void goToClayPit()
     {
         System.out.println("Information about clay pit:");
-        User.buildings[1].getInfo();
+        User.clayPit.getInfo();
     }
 
     public static void goToCastle()
     {
         System.out.println("Information about castle:");
-        User.buildings[4].getInfo();
+        User.castle.getInfo();
     }
     
     public static void goToSchool()
     {
         System.out.println("Information about school:");
-        User.buildings[5].getInfo();
+        User.school.getInfo();
     }
     
     public static void goToBarracks()
     {
         System.out.println("Information about barracks:");
-        User.buildings[6].getInfo();
+        User.barracks.getInfo();
     }
     
     // else
@@ -107,10 +107,10 @@ public class CasePrintouts
 
     public static void buildings()
     {
-        System.out.println("Forester:\t"+User.buildings[0].getAmount()+"\nClay Pit:\t"+User.buildings[1].getAmount()+"\nForge:\t\t"+User.buildings[2].getAmount()+"\nCottage:\t"+User.buildings[3].getAmount()+"\nCastle:\tLevel\t"+User.buildings[4].getAmount()+"\nSchool:\tLevel\t"+User.buildings[5].getAmount()+"\nBarracks:\tLevel\t"+User.buildings[6].getAmount());
+        System.out.println("Forester:\t"+User.forester.getAmount()+"\nClay Pit:\t"+User.clayPit.getAmount()+"\nForge:\t\t"+User.forge.getAmount()+"\nCottage:\t"+User.cottage.getAmount()+"\nCastle:\tLevel\t"+User.castle.getAmount()+"\nSchool:\tLevel\t"+User.school.getAmount()+"\nBarracks:\tLevel\t"+User.barracks.getAmount());
     }
 
-    // electking() actually not needed ... buildCastle is the same
+    // electking() actually not needed ... but still nice idea
     public static void electking()
     {
         //check resources       
@@ -124,8 +124,6 @@ public class CasePrintouts
             case 'n': System.out.println(" The king wasn´t elected."); break;
             default: System.out.println(" Please make a decision!"); break;
         }
-        //or
-        System.out.println("You don´t have enough resources.");
     }
 
     public static void clear()
