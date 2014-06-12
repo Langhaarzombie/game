@@ -22,7 +22,7 @@ public final class ImportAmountOfCostsAndPlus {
 
     private final int[] forester={6, 0, 0, 3, 3, 18, 0, 0, 0, 0, 0, 0};
 
-    private final int[] clayPit={3, 5, 0, 5, 6, 0, 15, 0, 0, 0, 0, 0};
+    private final int[] clayPit={4, 3, 0, 5, 6, 0, 15, 0, 0, 0, 0, 0};
 
     private final int[] forge={5, 2, 3, 6, 6, 0, 0, 11, 0, 0, 0, 0};
 
