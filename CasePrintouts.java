@@ -9,109 +9,103 @@ import java.util.*;
 public class CasePrintouts
 {    
 
-    public static void getDate()
-    {
-        Date date =new Date();
-        System.err.println (date);
-    }
-
     //building something
-    public static void buildCottage()
+    public static void buildCottage(View view)
     {
         User.cottage.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getSpecial1(), User.castle.getPlusGold());
     }
 
-    public static void buildForesterHouse()
+    public static void buildForesterHouse(View view)
     {
         User.forester.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getSpecial1(), User.castle.getPlusGold());
     }
 
-    public static void buildForge()
+    public static void buildForge(View view)
     {
         User.forge.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getSpecial1(), User.castle.getPlusGold());
     }
 
-    public static void buildClayPit()
+    public static void buildClayPit(View view)
     {
         User.clayPit.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getSpecial1(), User.castle.getPlusGold());
     }
 
-    public static void buildSchool()
+    public static void buildSchool(View view)
     {
         User.school.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getSpecial1(), User.castle.getPlusGold());
     }
 
-    public static void buildCastle()
+    public static void buildCastle(View view)
     {
         User.castle.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getSpecial1(), User.castle.getPlusGold());
     }
     
-    public static void buildBarracks()
+    public static void buildBarracks(View view)
     {
         User.barracks.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getSpecial1(), User.castle.getPlusGold());
     }
 
-    public static void resources()
+    public static void resources(View view)
     {
-        System.err.println("Wood:\t"+User.materials[0]+"\nClay:\t"+User.materials[1]+"\nIron:\t"+User.materials[2]+"\nGold:\t"+User.materials[3]+"\nPeople:\t"+User.materials[4]+"\n");
+        view.addText("Wood:\t"+User.materials[0]+"\nClay:\t"+User.materials[1]+"\nIron:\t"+User.materials[2]+"\nGold:\t"+User.materials[3]+"\nPeople:\t"+User.materials[4]+"\n");
     }
 
     // go to
-    public static void goToCottage()
+    public static void goToCottage(View view)
     {
-        System.out.println("Information about cottage:");
+        view.addText("Information about cottage:\n\n");
         User.cottage.getInfo();
     }
 
-    public static void goToForesterHouse()
+    public static void goToForesterHouse(View view)
     {
-        System.out.println("Information about forester:");
+        view.addText("Information about forester:\n\n");
         User.forester.getInfo();
     }
 
-    public static void goToForge()
+    public static void goToForge(View view)
     {
-        System.out.println("Information about forge:");
+        view.addText("Information about forge:\n\n");
         User.forge.getInfo();
     }
 
-    public static void goToClayPit()
+    public static void goToClayPit(View view)
     {
-        System.out.println("Information about clay pit:");
+        view.addText("Information about clay pit:\n\n");
         User.clayPit.getInfo();
     }
 
-    public static void goToCastle()
+    public static void goToCastle(View view)
     {
-        System.out.println("Information about castle:");
+        view.addText("Information about castle:\n\n");
         User.castle.getInfo();
     }
     
-    public static void goToSchool()
+    public static void goToSchool(View view)
     {
-        System.out.println("Information about school:");
+        view.addText("Information about school:\n\n");
         User.school.getInfo();
     }
     
-    public static void goToBarracks()
+    public static void goToBarracks(View view)
     {
-        System.out.println("Information about barracks:");
+        view.addText("Information about barracks:\n\n");
         User.barracks.getInfo();
     }
     
     // else
-    public static void exit()
+    public static void exit(View view)
     {
-        System.out.println("You exited the program. See you later alligator!");
+        view.addText("You exited the program. See you later!");
     }
 
-    public static void buildings()
+    public static void buildings(View view)
     {
-        System.out.println("Forester:\t"+User.forester.getAmount()+"\nClay Pit:\t"+User.clayPit.getAmount()+"\nForge:\t\t"+User.forge.getAmount()+"\nCottage:\t"+User.cottage.getAmount()+"\nCastle:\tLevel\t"+User.castle.getAmount()+"\nSchool:\tLevel\t"+User.school.getAmount()+"\nBarracks:\tLevel\t"+User.barracks.getAmount());
+        view.addText("Forester:\t"+User.forester.getAmount()+"\nClay Pit:\t"+User.clayPit.getAmount()+"\nForge:\t\t"+User.forge.getAmount()+"\nCottage:\t"+User.cottage.getAmount()+"\nCastle:\tLevel\t"+User.castle.getAmount()+"\nSchool:\tLevel\t"+User.school.getAmount()+"\nBarracks:\tLevel\t"+User.barracks.getAmount());
     }
 
     // electking() actually not needed ... but still nice idea
-    public static void electking()
+    public static void electking(View view)
     {
         //check resources       
         Scanner scanking = new Scanner (System.in);
@@ -120,13 +114,13 @@ public class CasePrintouts
 
         switch (choice)
         {
-            case 'y': System.out.println(" The citizens celebrate the new king!"); break;
-            case 'n': System.out.println(" The king wasn´t elected."); break;
-            default: System.out.println(" Please make a decision!"); break;
+            case 'y': view.addText(" The citizens celebrate the new king!"); break;
+            case 'n': view.addText(" The king wasn´t elected."); break;
+            default: view.addText(" Please make a decision!"); break;
         }
     }
 
-    public static void clear()
+    public static void clear(View view)
     {
         System.out.println("Your savegame will now be deleted.");
 

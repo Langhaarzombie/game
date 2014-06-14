@@ -3,8 +3,11 @@
 public class Generating {
 
     private ImportAmountOfCostsAndPlus importBuilding;
+    private View view;
 
-	public Generating(Forester forester, ClayPit clayPit, Forge forge, School school, Castle castle, Cottage cottage, Barracks barracks){
+	public Generating(View view, Forester forester, ClayPit clayPit, Forge forge, School school, Castle castle, Cottage cottage, Barracks barracks)
+	{
+		this.view=view;
 	    importBuilding=new ImportAmountOfCostsAndPlus();
 		assignValuesBuildings(forester, clayPit, forge, school, castle, cottage, barracks);
 	}

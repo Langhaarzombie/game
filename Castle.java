@@ -1,6 +1,7 @@
 
-public class Castle{
-    
+public class Castle
+{
+    private View view;
     private String name;
 
     // the costs of each material for constructing the building
@@ -29,8 +30,9 @@ public class Castle{
     private int special2;
     
     // constructor
-    public Castle(String name, int costsWood, int costsClay, int costsIron, int costsGold, int costsPeople, int plusWood, int plusClay, int plusIron, int plusGold, int plusPeople, int special1, int special2){
-
+    public Castle(View view, String name, int costsWood, int costsClay, int costsIron, int costsGold, int costsPeople, int plusWood, int plusClay, int plusIron, int plusGold, int plusPeople, int special1, int special2)
+    {
+        this.view=view;
         int max=0;
 
         setName(name);
@@ -189,7 +191,7 @@ public class Castle{
             Thread.sleep((long)time);
         } catch(InterruptedException ex) {
             Thread.currentThread().interrupt();
-            System.out.println("Error 303. Thread not available to sleep.");
+            view.addText("Error 303. Thread not available to sleep.");
         }
     }
     
@@ -217,7 +219,7 @@ public class Castle{
     public void newBuild(int wood, int clay, int iron, int gold, int people, int schoolMultiplicator, int castleMultiplicator){
 
         if(wood-this.costsWood<0||clay-this.costsClay<0||iron-this.costsIron<0||gold-this.costsGold<0||people-this.costsPeople<0){
-            System.out.println("You do not have enough resources."); 
+            view.addText("You do not have enough resources."); 
             return;
         }
 
@@ -227,7 +229,7 @@ public class Castle{
         gold=gold-this.costsGold;
         people=people-this.costsPeople;
 
-        System.out.println("Wait until the building is built.");
+        view.addText("Wait until the building is built.");
 
         learningWait(schoolMultiplicator);
         wood=wood+this.plusWood;
@@ -251,13 +253,13 @@ public class Castle{
         User.materials[4]=people;
 
         CasePrintouts.resources();
-        System.out.println("The building has been built.");
+        view.addText("The building has been built.");
     }
 
     // method is used to get info about costs and plus of creating the building
     public void getInfo(){
-        System.out.println("Costs:\nWood: "+this.costsWood+"\nClay: "+this.costsClay+"\nIron: "+this.costsIron+"\nGold: "+this.costsGold+"\nPeople: "+this.costsPeople);
-        System.out.println("Plus:\nWood: "+this.plusWood+"\nClay: "+this.plusClay+"\nIron: "+this.plusIron+"\nGold: "+this.plusGold+"\nPeople: "+this.plusPeople);
-        System.out.println("Amount: "+this.amount);
+        view.addText("Costs:\nWood: "+this.costsWood+"\nClay: "+this.costsClay+"\nIron: "+this.costsIron+"\nGold: "+this.costsGold+"\nPeople: "+this.costsPeople);
+        view.addText("Plus:\nWood: "+this.plusWood+"\nClay: "+this.plusClay+"\nIron: "+this.plusIron+"\nGold: "+this.plusGold+"\nPeople: "+this.plusPeople);
+        view.addText("Amount: "+this.amount);
     }
 }

@@ -17,35 +17,36 @@ public class User
     
     public static int[] materials;
     private Generating generate;
+    public View view;
+    public LogBookEntries lbe;
 
 	public User()
 	{
-		Scanner sc=new Scanner (System.in);
+		view= new View(this);
 		new Generating(this.forester, this. clayPit, this.forge, this.school, this.castle,this.cottage, this.barracks);
 		materials=new int[5];
-		for(int i=0;i<materials.length;i++){
-		    materials[i]=20;
-		  }
-		
-		boolean goOn=false; //for a loop that continues until user made an input
-
-		System.out.println ("Welcome to Texitscha! A game about nothing...\n" + 
-							"Created by Max, Michael and Jonas\n" +
-							"Please key in any character to continue");
-		System.out.println();
-
-		String anykey=sc.next();
-
-		while (!goOn)
+		for(int i=0;i<materials.length;i++)
 		{
-			if (anykey != "") 
-				{
-					goOn=true;
-					System.out.println("Now type help to see which commands there are.");
-				}
-		} //while
+		    materials[i]=20;
+		}
 
-		Cases.cases(); //call next method to make an input
-		sc.close(); //closes scanner
+		view.addText("Welcome to Texitscha! A text-adventure game.\n" + 
+					 "Created by Max, Michael and Jonas\n" +
+			   		 "Please press any character to continue\n");
+	}
+
+	public void keyEvent(KeyEvent e)
+	{
+		if(!goOn)
+		{
+			goOn=true;
+			//view.addText("Now type help to see which commands there are.");
+			lbe.firstEntry();
+		}
+
+		if(e.getKeyCode()==10)
+		{
+			Cases.cases(view); //call next method to make an input
+		}
 	}
 }

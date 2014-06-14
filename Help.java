@@ -12,29 +12,28 @@ public class Help {
      * used to see all the commands that the user can use.
      * certain commands take the user to another method
      */
-    public static void printhelps()
+    public static void printhelps(View view)
     {
-        System.out.println(" d - get date\n" +
-                           " build - make a building\n" +
-                           " r - resources\n" +
-                           " goto - go to a certain building\n" +
-                           " info - get information about your village\n" +
-                           " exit - close program\n");
+        view.addText(" build - make a building\n" +
+                     " r - resources\n" +
+                     " goto - go to a certain building\n" +
+                     " info - get information about your village\n" +
+                     " exit - close program\n");
     }
 
     /**
      * see all the commands for the things the user can build
      */
-    public static void build()
+    public static void build(View view)
     {
-        System.out.println("What do you want to build?\n\n buildcottage\n buildforester\n\n buildforge\n build claypit\n buildschool\n buildcastle\n buildbarracks\n");  
+        view.addText("What do you want to build?\n\n buildcottage\n buildforester\n buildforge\n buildclaypit\n buildschool\n buildcastle\n buildbarracks\n");  
     }
     // maybe not needed
     /**
      * see where the user can go to
      */
-    public static void goTo()
+    public static void goTo(View view)
     {
-        System.out.println("Where do you want to go to?\n\n gotocottage\n gotoforester\n \n gotoforge\n gotoclaypit\n buildschool\ngotocastle\n buildbarracks\n");
+        view.addText("Where do you want to go to?\n\n gotocottage\n gotoforester\n gotoforge\n gotoclaypit\n buildschool\ngotocastle\n buildbarracks\n");
     }
 }
