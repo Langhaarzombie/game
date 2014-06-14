@@ -252,7 +252,7 @@ public class Cottage
         User.materials[3]=gold;
         User.materials[4]=people;
 
-        CasePrintouts.resources();
+        CasePrintouts.resources(view);
         view.addText("The building has been built.");
     }
 
