@@ -44,7 +44,7 @@ public class View extends JFrame{
 		
 		//panel.setBackground(Color.BLACK);
 		setMinimumSize(new Dimension(600,400));
-		//setResizable(false);
+		setResizable(false);
 		setTitle("Texitscha");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setVisible(true);

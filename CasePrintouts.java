@@ -12,37 +12,37 @@ public class CasePrintouts
     //building something
     public static void buildCottage(View view)
     {
-        User.cottage.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getSpecial1(), User.castle.getPlusGold());
+        User.cottage.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getMultiplicator(), User.castle.getMultiplicator());
     }
 
     public static void buildForesterHouse(View view)
     {
-        User.forester.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getSpecial1(), User.castle.getPlusGold());
+        User.forester.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getMultiplicator(), User.castle.getMultiplicator());
     }
 
     public static void buildForge(View view)
     {
-        User.forge.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getSpecial1(), User.castle.getPlusGold());
+        User.forge.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getMultiplicator(), User.castle.getMultiplicator());
     }
 
     public static void buildClayPit(View view)
     {
-        User.clayPit.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getSpecial1(), User.castle.getPlusGold());
+        User.clayPit.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getMultiplicator(), User.castle.getMultiplicator());
     }
 
     public static void buildSchool(View view)
     {
-        User.school.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getSpecial1(), User.castle.getPlusGold());
+        User.school.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4]);
     }
 
     public static void buildCastle(View view)
     {
-        User.castle.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getSpecial1(), User.castle.getPlusGold());
+        User.castle.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getMultiplicator());
     }
     
     public static void buildBarracks(View view)
     {
-        User.barracks.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getSpecial1(), User.castle.getPlusGold());
+        User.barracks.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getMultiplicator());
     }
 
     public static void resources(View view)
@@ -108,21 +108,21 @@ public class CasePrintouts
     public static void electking(View view)
     {
         //check resources       
-        Scanner scanking = new Scanner (System.in);
-        System.out.println(" Are you sure you want to elect a... as the new king? y/n \n");
-        char choice=scanking.next().toCharArray()[0];
+        view.addText(" Are you sure you want to elect a... as the new king? y/n \n");
+        String scanking =view.tf.getText();
+        view.tf.setText("");
 
-        switch (choice)
+        switch (scanking)
         {
-            case 'y': view.addText(" The citizens celebrate the new king!"); break;
-            case 'n': view.addText(" The king wasn´t elected."); break;
+            case "y": view.addText(" The citizens celebrate the new king!"); break;
+            case "n": view.addText(" The king wasn´t elected."); break;
             default: view.addText(" Please make a decision!"); break;
         }
     }
 
     public static void clear(View view)
     {
-        System.out.println("Your savegame will now be deleted.");
+        view.addText("Your savegame will now be deleted.");
 
         try {
             Thread.sleep(5000);
@@ -131,6 +131,6 @@ public class CasePrintouts
             e.printStackTrace();
         }
 
-        System.out.println("Just kidding ;)");
+        view.addText("Just kidding ;)");
     }
 }

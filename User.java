@@ -3,6 +3,9 @@
  * This is the main class where all important variables are saved: Materials, Buildings, ...
  * Materials: wood, clay, iron, gold, people
  */
+
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.util.*;
 import java.io.*;
 public class User
@@ -18,13 +21,16 @@ public class User
     public static int[] materials;
     private Generating generate;
     public View view;
+    private boolean goOn=false;
     public LogBookEntries lbe;
 
 	public User()
 	{
 		view= new View(this);
-		new Generating(this.forester, this. clayPit, this.forge, this.school, this.castle,this.cottage, this.barracks);
+		new Generating(view, this.forester, this. clayPit, this.forge, this.school, this.castle,this.cottage, this.barracks);
 		materials=new int[5];
+		this.lbe=new LogBookEntries();
+		new MyKeyListener(this);
 		for(int i=0;i<materials.length;i++)
 		{
 		    materials[i]=20;
@@ -41,7 +47,7 @@ public class User
 		{
 			goOn=true;
 			//view.addText("Now type help to see which commands there are.");
-			lbe.firstEntry();
+			lbe.firstEntry(this.view);
 		}
 
 		if(e.getKeyCode()==10)
