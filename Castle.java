@@ -3,13 +3,15 @@ public class Castle extends Buildings
 {
     public int multiplicator;
 
-    public Castle(View view, String name, int costsWood, int costsClay, int costsIron, int costsGold, int costsPeople, int plusGold, int plusPeople){
+    public Castle(View view, String name, int costsWood, int costsClay, int costsIron, int costsGold, int costsPeople, int plusGold, int plusPeople)
+    {
         super(view, name, costsWood, costsClay, costsIron, costsGold, costsPeople, 0, 0, 0, plusGold, plusPeople);
         this.multiplicator=4;
     }
 
     //TODO levelUp!!! Jonas?
-    public void levelUp(int oldLevel, int newLevel){
+    public void levelUp(int oldLevel, int newLevel)
+    {
         if(this.amount<1) return;
 
         // for costs
@@ -22,9 +24,11 @@ public class Castle extends Buildings
     // for unique buildings newBuild = a level up
     // plusGoldCastle is taken from the castle object to calculate the amount of gold added
     // schoolMultiplicator is taken from special1 of the School Object and is used to calculate the time needed to build something new/level up
-    public void newBuild(int wood, int clay, int iron, int gold, int people, int schoolMultiplicator){
+    public void newBuild(int wood, int clay, int iron, int gold, int people, int schoolMultiplicator)
+    {
 
-        if(wood-this.costsWood<0||clay-this.costsClay<0||iron-this.costsIron<0||gold-this.costsGold<0||people-this.costsPeople<0){
+        if(wood-this.costsWood<0||clay-this.costsClay<0||iron-this.costsIron<0||gold-this.costsGold<0||people-this.costsPeople<0)
+        {
             view.addText("You do not have enough resources."); 
             return;
         }
@@ -56,12 +60,14 @@ public class Castle extends Buildings
         view.addText("The building has been built.");
     }
 
-    public int getMultiplicator(){
+    public int getMultiplicator()
+    {
         return this.multiplicator;
     }
 
     // method is used to get info about costs and plus of creating the building
-    public void getInfo(){
+    public void getInfo()
+    {
         view.addText("Costs:\nWood: "+this.costsWood+"\nClay: "+this.costsClay+"\nIron: "+this.costsIron+"\nGold: "+this.costsGold+"\nPeople: "+this.costsPeople);
         view.addText("Plus:\nWood: "+this.plusWood+"\nClay: "+this.plusClay+"\nIron: "+this.plusIron+"\nGold: "+this.plusGold+"\nPeople: "+this.plusPeople);
         view.addText("Amount: "+this.amount);

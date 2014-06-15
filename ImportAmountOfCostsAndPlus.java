@@ -1,6 +1,7 @@
  
 
-public final class ImportAmountOfCostsAndPlus {
+public final class ImportAmountOfCostsAndPlus 
+{
 
     // arrays for the costs and plus of each building for the first generating
     /*
@@ -36,42 +37,50 @@ public final class ImportAmountOfCostsAndPlus {
         importBuilding=new int[7][12];
         
         // forester
-        for(int i=0;i<10;i++){
+        for(int i=0;i<10;i++)
+        {
             importBuilding[0][i]=forester[i];
         }
         
         // clay pit
-        for(int i=0;i<10;i++){
+        for(int i=0;i<10;i++)
+        {
             importBuilding[1][i]=clayPit[i];
         }
         
         // forge
-        for(int i=0;i<10;i++){
+        for(int i=0;i<10;i++)
+        {
             importBuilding[2][i]=forge[i];
         }
         
         // cottage
-        for(int i=0;i<10;i++){
+        for(int i=0;i<10;i++)
+        {
             importBuilding[3][i]=cottage[i];
         }
         
         // castle
-        for(int i=0;i<10;i++){
+        for(int i=0;i<10;i++)
+        {
             importBuilding[4][i]=castle[i];
         }
         
         // school
-        for(int i=0;i<10;i++){
+        for(int i=0;i<10;i++)
+        {
             importBuilding[5][i]=school[i];
         }
         
         // barracks
-        for(int i=0;i<10;i++){
+        for(int i=0;i<10;i++)
+        {
             importBuilding[6][i]=barracks[i];
         }
     }
     
-    public static int getData(int firstIndex, int secondIndex){
+    public static int getData(int firstIndex, int secondIndex)
+    {
         return importBuilding[firstIndex][secondIndex];
     }
 }

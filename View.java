@@ -9,7 +9,8 @@ import java.io.Serializable;
 
 import javax.swing.*;
 
-public class View extends JFrame{
+public class View extends JFrame
+{
 	private JPanel panel;
 	private JFileChooser fchooser;
 	public JTextArea ta;
@@ -18,7 +19,8 @@ public class View extends JFrame{
 	private MyKeyListener mkl;
 	private JScrollPane jsp;
 	
-	public View(User user){
+	public View(User user)
+	{
 		this.user=user;
 		this.mkl=new MyKeyListener(user);
 		panel=new JPanel(new FlowLayout());
@@ -49,7 +51,9 @@ public class View extends JFrame{
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setVisible(true);
 	}
-	public File showSaveFileChooser(){
+	
+	public File showSaveFileChooser()
+	{
 		int result = fchooser.showSaveDialog(this);
 		if(result == JFileChooser.APPROVE_OPTION){
 			return fchooser.getSelectedFile();
@@ -58,16 +62,20 @@ public class View extends JFrame{
 		}
 	}
 	
-	public File showLoadFileChooser(){
+	public File showLoadFileChooser()
+	{
 		int result = fchooser.showOpenDialog(this);
 		if(result == JFileChooser.APPROVE_OPTION){
 			return fchooser.getSelectedFile();
-		}else{
+		}
+		else
+		{
 			return null;
 		}
-		
 	}
-	public void addText(String text){
+	
+	public void addText(String text)
+	{
 		ta.setText(ta.getText()+"\n"+text);
 	}
 }

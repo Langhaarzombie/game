@@ -6,7 +6,8 @@
  *
  */
 
-public class Help {
+public class Help 
+{
 
     /**
      * used to see all the commands that the user can use.

@@ -2,13 +2,15 @@
 public class Forge extends Buildings
 {
     
-    public Forge(View view, String name, int costsWood, int costsClay, int costsIron, int costsGold, int costsPeople, int plusIron){
+    public Forge(View view, String name, int costsWood, int costsClay, int costsIron, int costsGold, int costsPeople, int plusIron)
+    {
         super(view, name, costsWood, costsClay, costsIron, costsGold, costsPeople, 0, 0, plusIron, 0, 0);
     }
     
     
     //TODO levelUp!!! Jonas?
-    public void levelUp(int oldLevel, int newLevel){
+    public void levelUp(int oldLevel, int newLevel)
+    {
         if(this.amount<1) return;
         
         // for costs
@@ -23,9 +25,11 @@ public class Forge extends Buildings
     // for unique buildings newBuild = a level up
     // plusGoldCastle is taken from the castle object to calculate the amount of gold added
     // schoolMultiplicator is taken from special1 of the School Object and is used to calculate the time needed to build something new/level up
-    public void newBuild(int wood, int clay, int iron, int gold, int people, int schoolMultiplicator, int castleMultiplicator){
+    public void newBuild(int wood, int clay, int iron, int gold, int people, int schoolMultiplicator, int castleMultiplicator)
+    {
 
-        if(wood-this.costsWood<0||clay-this.costsClay<0||iron-this.costsIron<0||gold-this.costsGold<0||people-this.costsPeople<0){
+        if(wood-this.costsWood<0||clay-this.costsClay<0||iron-this.costsIron<0||gold-this.costsGold<0||people-this.costsPeople<0)
+        {
             view.addText("You do not have enough resources."); 
             return;
         }
@@ -58,7 +62,8 @@ public class Forge extends Buildings
     }
 
     // method is used to get info about costs and plus of creating the building
-    public void getInfo(){
+    public void getInfo()
+    {
         view.addText("Costs:\nWood: "+this.costsWood+"\nClay: "+this.costsClay+"\nIron: "+this.costsIron+"\nGold: "+this.costsGold+"\nPeople: "+this.costsPeople);
         view.addText("Plus:\nWood: "+this.plusWood+"\nClay: "+this.plusClay+"\nIron: "+this.plusIron+"\nGold: "+this.plusGold+"\nPeople: "+this.plusPeople);
         view.addText("Amount: "+this.amount);

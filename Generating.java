@@ -1,6 +1,7 @@
  
 
-public class Generating {
+public class Generating 
+{
 
     private ImportAmountOfCostsAndPlus importBuilding;
     private View view;
@@ -12,7 +13,8 @@ public class Generating {
 		assignValuesBuildings(forester, clayPit, forge, school, castle, cottage, barracks);
 	}
 
-	private void assignValuesBuildings(Forester forester, ClayPit clayPit, Forge forge, School school, Castle castle, Cottage cottage, Barracks barracks){
+	private void assignValuesBuildings(Forester forester, ClayPit clayPit, Forge forge, School school, Castle castle, Cottage cottage, Barracks barracks)
+	{
 	    // for forester
 		forester=new Forester(this.view, "Forester", importBuilding.getData(0,0), importBuilding.getData(0,3), importBuilding.getData(0,4), importBuilding.getData(0,5));
 

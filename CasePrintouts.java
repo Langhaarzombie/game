@@ -126,9 +126,12 @@ public class CasePrintouts
     {
         view.addText("Your savegame will now be deleted.");
 
-        try {
+        try
+        {
             Thread.sleep(5000);
-        } catch (InterruptedException e) {
+        }
+        catch (InterruptedException e) 
+        {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }

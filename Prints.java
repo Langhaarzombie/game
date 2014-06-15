@@ -1,7 +1,9 @@
 
-public class Prints{
+public class Prints
+{
     
-    public static void print(String text){
+    public static void print(String text)
+    {
         System.out.println(text);
     }
     
