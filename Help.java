@@ -15,11 +15,11 @@ public class Help
      */
     public static void printhelps(View view)
     {
-        view.addText(" build - make a building\n" +
-                     " r - resources\n" +
-                     " goto - go to a certain building\n" +
-                     " info - get information about your village\n" +
-                     " exit - close program\n");
+    	view.addText("info - get information about your village\n" +
+    				 " r - resources\n" +
+    				 " build - make a building\n" +
+                	 " goto - go to a certain building\n" +
+                	 " exit - close program\n\n");
     }
 
     /**
@@ -27,7 +27,7 @@ public class Help
      */
     public static void build(View view)
     {
-        view.addText("What do you want to build?\n\n buildcottage\n buildforester\n buildforge\n buildclaypit\n buildschool\n buildcastle\n buildbarracks\n");  
+        view.addText("\nWhat do you want to build?\n\n buildcottage\n buildforester\n buildforge\n buildclaypit\n buildschool\n buildcastle\n buildbarracks\n");  
     }
     // maybe not needed
     /**

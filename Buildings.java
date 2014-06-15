@@ -1,5 +1,6 @@
 
-public class Buildings{
+public class Buildings
+{
 
     public View view;
 
@@ -46,51 +47,63 @@ public class Buildings{
         setAmount(0);
     }
 
-    public int getAmount() {
+    public int getAmount()
+    {
         return amount;
     }
 
-    public void setAmount(int amount) {
+    public void setAmount(int amount) 
+    {
         this.amount = amount;
     }
 
-    public int getPlusPeople() {
+    public int getPlusPeople() 
+    {
         return plusPeople;
     }
 
-    public void setPlusPeople(int plusPeople) {
+    public void setPlusPeople(int plusPeople)
+    {
         this.plusPeople = plusPeople;
     }
 
-    public int getPlusGold() {
+    public int getPlusGold() 
+    {
         return plusGold;
     }
 
-    public void setPlusGold(int plusGold) {
+    public void setPlusGold(int plusGold)
+    {
         this.plusGold = plusGold;
     }
 
-    public int getPlusIron() {
+    public int getPlusIron() 
+    {
         return plusIron;
     }
 
-    public void setPlusIron(int plusIron) {
+    public void setPlusIron(int plusIron)
+    {
         this.plusIron = plusIron;
     }
 
-    public int getPlusClay() {
+    public int getPlusClay() 
+    {
         return plusClay;
     }
 
-    public void setPlusClay(int plusClay) {
+    public void setPlusClay(int plusClay) 
+    {
         this.plusClay = plusClay;
     }
 
-    public int getPlusWood() {
+    public int getPlusWood() 
+    {
         return plusWood;
     }
 
-    public void setPlusWood(int plusWood) {
+    public void setPlusWood(int plusWood) 
+    {
         this.plusWood = plusWood;
     }
 
@@ -98,56 +111,71 @@ public class Buildings{
         return costsPeople;
     }
 
-    public void setCostsPeople(int costsPeople) {
+    public void setCostsPeople(int costsPeople)
+    {
         this.costsPeople = costsPeople;
     }
 
-    public int getCostsGold() {
+    public int getCostsGold() 
+    {
         return costsGold;
     }
 
-    public void setCostsGold(int costsGold) {
+    public void setCostsGold(int costsGold) 
+    {
         this.costsGold = costsGold;
     }
 
-    public int getCostsIron() {
+    public int getCostsIron() 
+    {
         return costsIron;
     }
 
-    public void setCostsIron(int costsIron) {
+    public void setCostsIron(int costsIron) 
+    {
         this.costsIron = costsIron;
     }
 
-    public int getCostsClay() {
+    public int getCostsClay() 
+    {
         return costsClay;
     }
 
-    public void setCostsClay(int costsClay) {
+    public void setCostsClay(int costsClay) 
+    {
         this.costsClay = costsClay;
     }
 
-    public int getCostsWood() {
+    public int getCostsWood() 
+    {
         return costsWood;
     }
 
-    public void setCostsWood(int costsWood) {
+    public void setCostsWood(int costsWood)
+    {
         this.costsWood = costsWood;
     }
 
-    public String getName() {
+    public String getName() 
+    {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(String name) 
+    {
         this.name = name;
     }
 
     // used if people are trained (it takes a time until the building can be built)
-    public void learningWait(int multiplicator, int costs){
+    public void learningWait(int multiplicator, int costs)
+    {
         int time=multiplicator*costs;
-        try {
+        try 
+        {
             Thread.sleep((long)time);
-        } catch(InterruptedException ex) {
+        } 
+        catch(InterruptedException ex)
+        {
             Thread.currentThread().interrupt();
             view.addText("Error 303. Thread not available to sleep.");
         }

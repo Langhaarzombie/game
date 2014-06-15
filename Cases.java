@@ -6,7 +6,8 @@ import java.util.Scanner;
  * @author Michael Bartl
  *
  */
-public class Cases {
+public class Cases 
+{
     public static void cases(View view)
     {
         String choice = view.tf.getText();
