@@ -1,5 +1,4 @@
 
-import java.util.*;
 
 /**
  * the user is taken to this class if he types any command that has nothing to do with Help
@@ -12,7 +11,7 @@ public class CasePrintouts
     //building something
     public static void buildCottage(View view)
     {
-        User.cottage.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getMultiplicator(), User.castle.getMultiplicator());
+    	User.cottage.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getMultiplicator(), User.castle.getMultiplicator());
     }
 
     public static void buildForesterHouse(View view)

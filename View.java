@@ -15,7 +15,6 @@ public class View extends JFrame
 	private JFileChooser fchooser;
 	public JTextArea ta;
 	public JTextField tf;
-	private User user;
 	private MyKeyListener mkl;
 	private JScrollPane jsp;
 	

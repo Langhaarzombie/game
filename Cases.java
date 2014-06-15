@@ -1,5 +1,4 @@
 
-import java.util.Scanner;
 /**
  * class where all the cases are stored.
  * from here the user is redirected to other classes and methods
