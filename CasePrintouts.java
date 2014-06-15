@@ -109,15 +109,7 @@ public class CasePrintouts
     {
         //check resources       
         view.addText(" Are you sure you want to elect a... as the new king? y/n \n");
-<<<<<<< HEAD
-        String scanking =view.tf.getText();
-        view.tf.setText("");
 
-        switch (scanking)
-        {
-            case "y": view.addText(" The citizens celebrate the new king!"); break;
-            case "n": view.addText(" The king wasn´t elected."); break;
-=======
         //char choice=scanking.next().toCharArray()[0];
         String scanking = view.tf.getText();
         view.tf.setText("");
@@ -126,7 +118,6 @@ public class CasePrintouts
         {
             case "y": view.addText(" The citizens celebrate the new king!"); break;
             case "n": view.addText(" The king wasnÂ´t elected."); break;
->>>>>>> d25cd5f3c5511c4a4e318b68e2c229164877bf5e
             default: view.addText(" Please make a decision!"); break;
         }
     }

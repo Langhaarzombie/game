@@ -16,7 +16,7 @@ public class Cases {
         if(choice.length()>0)
             switch (choice)
             {
-                case "help": Help.printhelps(view); break;
+                case "book": Help.printhelps(view); break;
                 case "build": Help.build(view); break;
                 case "buildcottage": CasePrintouts.buildCottage(view); break;
                 case "buildforester": CasePrintouts.buildForesterHouse(view); break;
