@@ -123,7 +123,7 @@ public class CasePrintouts
 
     public static void clear(View view)
     {
-        System.out.println("Your savegame will now be deleted.");
+        view.addText("Your savegame will now be deleted.");
 
         try {
             Thread.sleep(5000);
@@ -132,6 +132,6 @@ public class CasePrintouts
             e.printStackTrace();
         }
 
-        System.out.println("Just kidding ;)");
+        view.addText("Just kidding ;)");
     }
 }
