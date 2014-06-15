@@ -20,7 +20,6 @@ public class View extends JFrame
 	
 	public View(User user)
 	{
-		this.user=user;
 		this.mkl=new MyKeyListener(user);
 		panel=new JPanel(new FlowLayout());
 		ta=new JTextArea(20,50);
