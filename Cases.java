@@ -9,7 +9,6 @@ import java.util.Scanner;
 public class Cases {
     public static void cases(View view)
     {
-        boolean end=false;
         String choice = view.tf.getText();
         view.tf.setText("");
 
@@ -35,7 +34,7 @@ public class Cases {
                 case "gotocastle": CasePrintouts.goToCastle(view); break;
                 case "gotoschool": CasePrintouts.goToSchool(view); break;
                 case "gotobarracks": CasePrintouts.goToBarracks(view); break;
-                case "exit": end=true; CasePrintouts.exit(view); break;
+                case "exit": CasePrintouts.exit(view); break;
                 case "info": CasePrintouts.buildings(view); break;
                 case "electking": CasePrintouts.electking(view); break;
                 case "clear": CasePrintouts.clear(view); break;
