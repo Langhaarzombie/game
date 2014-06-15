@@ -17,7 +17,7 @@ public class Help
     {
     	view.addText("info - get information about your village\n" +
     				 " r - resources\n" +
-    				 " build - make a building\n" +
+    				 " build - create a building\n" +
                 	 " goto - go to a certain building\n" +
                 	 " exit - close program\n\n");
     }
