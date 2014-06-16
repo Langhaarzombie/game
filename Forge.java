@@ -58,15 +58,15 @@ public class Forge extends Buildings
         User.materials[3]=gold;
         User.materials[4]=people;
 
+        view.addText("A forge has been built.\n");
         CasePrintouts.resources(view);
-        view.addText("A forge has been created.\n");
     }
 
     // method is used to get info about costs and plus of creating the building
     public void getInfo()
     {
-        view.addText("Costs:\nWood: "+this.costsWood+"\nClay: "+this.costsClay+"\nIron: "+this.costsIron+"\nGold: "+this.costsGold+"\nPeople: "+this.costsPeople);
-        view.addText("Plus:\nWood: "+this.plusWood+"\nClay: "+this.plusClay+"\nIron: "+this.plusIron+"\nGold: "+this.plusGold+"\nPeople: "+this.plusPeople);
-        view.addText("Amount: "+this.amount);
+        view.addText("Costs:\nWood: "+this.costsWood+"\nClay: "+this.costsClay+"\nIron: "+this.costsIron+"\nGold: "+this.costsGold+"\nPeople: "+this.costsPeople+"\n");
+        view.addText("Plus:\nWood: "+this.plusWood+"\nClay: "+this.plusClay+"\nIron: "+this.plusIron+"\nGold: "+this.plusGold+"\nPeople: "+this.plusPeople+"\n");
+        view.addText("Amount: "+this.amount+"\n\n");
     }
 }

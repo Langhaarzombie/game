@@ -81,49 +81,49 @@ public class CasePrintouts
 
     public static void resources(View view)
     {
-        view.addText("Wood:\t"+User.materials[0]+"\nClay:\t"+User.materials[1]+"\nIron:\t"+User.materials[2]+"\nGold:\t"+User.materials[3]+"\nPeople:\t"+User.materials[4]+"\n");
+        view.addText("Resources:\n\nWood:\t"+User.materials[0]+"\nClay:\t"+User.materials[1]+"\nIron:\t"+User.materials[2]+"\nGold:\t"+User.materials[3]+"\nPeople:\t"+User.materials[4]+"\n\n");
     }
 
     // go to
     public static void goToCottage(View view)
     {
-        view.addText("Information about cottage:\n\n");
+        view.addText("Information about cottage:\n");
         User.cottage.getInfo();
     }
 
     public static void goToForesterHouse(View view)
     {
-        view.addText("Information about forester:\n\n");
+        view.addText("Information about forester:\n");
         User.forester.getInfo();
     }
 
     public static void goToForge(View view)
     {
-        view.addText("Information about forge:\n\n");
+        view.addText("Information about forge:\n");
         User.forge.getInfo();
     }
 
     public static void goToClayPit(View view)
     {
-        view.addText("Information about clay pit:\n\n");
+        view.addText("Information about clay pit:\n");
         User.clayPit.getInfo();
     }
 
     public static void goToCastle(View view)
     {
-        view.addText("Information about castle:\n\n");
+        view.addText("Information about castle:\n");
         User.castle.getInfo();
     }
 
     public static void goToSchool(View view)
     {
-        view.addText("Information about school:\n\n");
+        view.addText("Information about school:\n");
         User.school.getInfo();
     }
 
     public static void goToBarracks(View view)
     {
-        view.addText("Information about barracks:\n\n");
+        view.addText("Information about barracks:\n");
         User.barracks.getInfo();
     }
 
@@ -135,7 +135,7 @@ public class CasePrintouts
 
     public static void info(View view)
     {
-        view.addText("Forester:\t"+User.forester.getAmount()+"\nClay Pit:\t"+User.clayPit.getAmount()+"\nForge:\t"+User.forge.getAmount()+"\nCottage:\t"+User.cottage.getAmount()+"\nCastle:\tLevel\t"+User.castle.getAmount()+"\nSchool:\tLevel\t"+User.school.getAmount()+"\nBarracks:\tLevel\t"+User.barracks.getAmount());
+        view.addText("Info:\n\nForester:\t"+User.forester.getAmount()+"\nClay Pit:\t"+User.clayPit.getAmount()+"\nForge:\t"+User.forge.getAmount()+"\nCottage:\t"+User.cottage.getAmount()+"\nCastle:\tLevel\t"+User.castle.getAmount()+"\nSchool:\tLevel\t"+User.school.getAmount()+"\nBarracks:\tLevel\t"+User.barracks.getAmount()+"\n\n");
     }
 
     // electking() actually not needed ... but still nice idea
