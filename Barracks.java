@@ -47,7 +47,8 @@ public class Barracks extends Buildings
         gold=gold-this.costsGold;
         people=people-this.costsPeople;
 
-        view.addText("Wait until the building has been created.\n");
+        //isnt´t needed for now
+        //view.addText("Wait until the building has been created.\n");
 
         learningWait(schoolMultiplicator, this.costsPeople);
         wood=wood+this.plusWood;
