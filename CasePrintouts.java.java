@@ -1,47 +1,82 @@
 
-
 /**
  * the user is taken to this class if he types any command that has nothing to do with Help
  * @author Michael Bartl
  *
  */
+
 public class CasePrintouts
 {    
 
     //building something
     public static void buildCottage(View view)
     {
-    	User.cottage.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getMultiplicator(), User.castle.getMultiplicator());
+        try{
+            view.setCursorWaiting();
+            User.cottage.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getMultiplicator(), User.castle.getMultiplicator());
+        }finally{
+            view.setCurorDefault();
+        }
     }
 
     public static void buildForesterHouse(View view)
     {
-        User.forester.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getMultiplicator(), User.castle.getMultiplicator());
+        try{
+            view.setCursorWaiting();
+            User.forester.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getMultiplicator(), User.castle.getMultiplicator());
+        }finally{
+            view.setCurorDefault();
+        }
     }
 
     public static void buildForge(View view)
     {
-        User.forge.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getMultiplicator(), User.castle.getMultiplicator());
+        try{
+            view.setCursorWaiting();
+            User.forge.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getMultiplicator(), User.castle.getMultiplicator());
+        }finally{
+            view.setCurorDefault();
+        }
     }
 
     public static void buildClayPit(View view)
     {
-        User.clayPit.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getMultiplicator(), User.castle.getMultiplicator());
+        try{
+            view.setCursorWaiting();
+            User.clayPit.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getMultiplicator(), User.castle.getMultiplicator());
+        }finally{
+            view.setCurorDefault();
+        }
     }
 
     public static void buildSchool(View view)
     {
-        User.school.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4]);
+        try{
+            view.setCursorWaiting();
+            User.school.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4]);
+        }finally{
+            view.setCurorDefault();
+        }
     }
 
     public static void buildCastle(View view)
     {
-        User.castle.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getMultiplicator());
+        try{
+            view.setCursorWaiting();
+            User.castle.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getMultiplicator());
+        }finally{
+            view.setCurorDefault();
+        }
     }
-    
+
     public static void buildBarracks(View view)
     {
-        User.barracks.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getMultiplicator());
+        try{
+            view.setCursorWaiting();
+            User.barracks.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getMultiplicator());
+        }finally{
+            view.setCurorDefault();
+        }
     }
 
     public static void resources(View view)
@@ -79,19 +114,19 @@ public class CasePrintouts
         view.addText("Information about castle:\n\n");
         User.castle.getInfo();
     }
-    
+
     public static void goToSchool(View view)
     {
         view.addText("Information about school:\n\n");
         User.school.getInfo();
     }
-    
+
     public static void goToBarracks(View view)
     {
         view.addText("Information about barracks:\n\n");
         User.barracks.getInfo();
     }
-    
+
     // else
     public static void exit(View view)
     {
@@ -112,7 +147,7 @@ public class CasePrintouts
         //char choice=scanking.next().toCharArray()[0];
         String scanking = view.tf.getText();
         view.tf.setText("");
-        
+
         switch (scanking)
         {
             case "y": view.addText(" The citizens celebrate the new king!"); break;
@@ -124,10 +159,14 @@ public class CasePrintouts
     public static void clear(View view)
     {
         view.addText("Your savegame will now be deleted.");
-
         try
         {
-            Thread.sleep(5000);
+            try{
+                view.setCursorWaiting();
+                Thread.sleep(5000);
+            }finally{
+                view.setCurorDefault();
+            }
         }
         catch (InterruptedException e) 
         {
@@ -135,6 +174,6 @@ public class CasePrintouts
             e.printStackTrace();
         }
 
-        view.addText("Just kidding ;)");
+        view.addText("Just kidding");
     }
 }

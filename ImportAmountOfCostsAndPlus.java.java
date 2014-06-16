@@ -21,17 +21,17 @@ public final class ImportAmountOfCostsAndPlus
 
     private final int[] forester={6, 0, 0, 3, 3, 18, 0, 0, 0, 0};
 
-    private final int[] clayPit={4, 3, 0, 5, 6, 0, 15, 0, 0, 0};
+    private final int[] clayPit={4, 3, 0, 4, 6, 0, 15, 0, 0, 0};
 
-    private final int[] forge={5, 2, 3, 6, 6, 0, 0, 11, 0, 0};
+    private final int[] forge={5, 2, 3, 5, 6, 0, 0, 11, 0, 0};
 
-    private final int[] cottage={4, 3, 1, 4, 2, 0, 0, 0, 0, 9};
+    private final int[] cottage={4, 3, 1, 3, 2, 0, 0, 0, 0, 9};
 
-    private final int[] castle={12, 16, 9, 14, 19, 0, 0, 0, 6, 2};
+    private final int[] castle={12, 16, 9, 13, 19, 0, 0, 0, 6, 2};
 
-    private final int[] school={9, 6, 4, 7, 9, 0, 0, 0, 0, 0};
+    private final int[] school={9, 6, 4, 6, 9, 0, 0, 0, 0, 0};
     
-    private final int[] barracks={7, 4, 3, 5, 2, 0, 0, 0, 4, 0};
+    private final int[] barracks={7, 4, 3, 4, 2, 0, 0, 0, 4, 0};
 
     public ImportAmountOfCostsAndPlus(){
         importBuilding=new int[7][12];
