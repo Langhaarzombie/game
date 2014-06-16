@@ -15,7 +15,7 @@ public class Help
      */
     public static void printhelps(View view)
     {
-    	view.addText("info - get information about your village\n" +
+    	view.addText(" info - get information about your village\n" +
     				 " r - resources\n" +
     				 " build - create a building\n" +
                 	 " goto - go to a certain building\n" +

@@ -29,7 +29,7 @@ public class Castle extends Buildings
 
         if(wood-this.costsWood<0||clay-this.costsClay<0||iron-this.costsIron<0||gold-this.costsGold<0||people-this.costsPeople<0)
         {
-            view.addText("You do not have enough resources."); 
+            view.addText("You do not have enough resources.\n"); 
             return;
         }
 
@@ -39,7 +39,7 @@ public class Castle extends Buildings
         gold=gold-this.costsGold;
         people=people-this.costsPeople;
 
-        view.addText("Wait until the building is built.");
+        view.addText("Wait until the building has been created.\n");
 
         learningWait(schoolMultiplicator, this.costsPeople);
         wood=wood+this.plusWood;
@@ -57,7 +57,7 @@ public class Castle extends Buildings
         User.materials[4]=people;
 
         CasePrintouts.resources(view);
-        view.addText("The building has been built.");
+        view.addText("The building has been created.\n");
     }
 
     public int getMultiplicator()
