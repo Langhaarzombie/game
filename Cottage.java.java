@@ -45,7 +45,7 @@ public class Cottage extends Buildings
         wood=wood+this.plusWood;
         clay=clay+this.plusClay;
         iron=iron+this.plusIron;
-        gold=gold+this.plusGold;
+        gold=gold+(this.costsPeople*castleMultiplicator);
         people=people+this.plusPeople;
 
         this.amount++;
