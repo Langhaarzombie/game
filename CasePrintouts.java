@@ -98,7 +98,7 @@ public class CasePrintouts
         view.addText("You exited the program. See you later!");
     }
 
-    public static void buildings(View view)
+    public static void info(View view)
     {
         view.addText("Forester:\t"+User.forester.getAmount()+"\nClay Pit:\t"+User.clayPit.getAmount()+"\nForge:\t"+User.forge.getAmount()+"\nCottage:\t"+User.cottage.getAmount()+"\nCastle:\tLevel\t"+User.castle.getAmount()+"\nSchool:\tLevel\t"+User.school.getAmount()+"\nBarracks:\tLevel\t"+User.barracks.getAmount());
     }
