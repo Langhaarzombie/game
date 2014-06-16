@@ -66,7 +66,7 @@ public class Barracks extends Buildings
         User.materials[4]=people;
 
         CasePrintouts.resources(view);
-        view.addText("The building has been created.\n");
+        view.addText("The barrack have leveled up.\n");
     }
 
     // method is used to get info about costs and plus of creating the building

@@ -59,7 +59,7 @@ public class Forester extends Buildings
         User.materials[4]=people;
 
         CasePrintouts.resources(view);
-        view.addText("The building has been created.\n");
+        view.addText("A forester has been created.\n");
     }
 
     // method is used to get info about costs and plus of creating the building

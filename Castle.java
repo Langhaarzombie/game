@@ -58,7 +58,7 @@ public class Castle extends Buildings
         User.materials[4]=people;
 
         CasePrintouts.resources(view);
-        view.addText("The building has been created.\n");
+        view.addText("The castle has leveled up.\n");
     }
 
     public int getMultiplicator()
