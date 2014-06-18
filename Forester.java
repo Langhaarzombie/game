@@ -65,8 +65,8 @@ public class Forester extends Buildings
     // method is used to get info about costs and plus of creating the building
     public void getInfo()
     {
-        view.addText("Costs:\nWood: "+this.costsWood+"\nClay: "+this.costsClay+"\nIron: "+this.costsIron+"\nGold: "+this.costsGold+"\nPeople: "+this.costsPeople+"\n");
-        view.addText("Plus:\nWood: "+this.plusWood+"\nClay: "+this.plusClay+"\nIron: "+this.plusIron+"\nGold: "+this.plusGold+"\nPeople: "+this.plusPeople+"\n");
-        view.addText("Amount: "+this.amount+"\n\n");
+        view.addText("Costs:\n\tWood:\t"+this.costsWood+"\n\tClay:\t"+this.costsClay+"\n\tIron: \t"+this.costsIron+"\n\tGold:\t"+this.costsGold+"\n\tPeople:\t"+this.costsPeople+"\n");
+        view.addText("Plus:\n\tWood:\t"+this.plusWood+"\n\tClay:\t"+this.plusClay+"\n\tIron:\t"+this.plusIron+"\n\tGold:\t"+this.plusGold+"\n\tPeople:\t"+this.plusPeople+"\n");
+        view.addText("Amount:\t"+this.amount+"\n\n");
     }
 }

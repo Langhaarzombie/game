@@ -28,7 +28,7 @@ public class Cases
                 case "resources": CasePrintouts.resources(view); break;
                 case "goto": Help.goTo(view); break;
                 case "gotocottage": CasePrintouts.goToCottage(view); break;
-                case "gotoforester": CasePrintouts.goToForesterHouse(view); break;
+                case "gotoforester": CasePrintouts.goToForester(view); break;
                 case "gotoforge": CasePrintouts.goToForge(view); break;
                 case "gotoclaypit": CasePrintouts.goToClayPit(view); break;
                 case "gotocastle": CasePrintouts.goToCastle(view); break;

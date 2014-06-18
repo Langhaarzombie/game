@@ -91,7 +91,7 @@ public class CasePrintouts
         User.cottage.getInfo();
     }
 
-    public static void goToForesterHouse(View view)
+    public static void goToForester(View view)
     {
         view.addText("Information about forester:\n");
         User.forester.getInfo();
