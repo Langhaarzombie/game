@@ -30,7 +30,8 @@ public class School extends Buildings
     public void newBuild(int wood, int clay, int iron, int gold, int people)
     {
 
-    	if(this.costsWood<4||this.costsClay<2||this.costsIron<0||this.costsGold<3||this.costsPeople<2){
+    	if(this.costsWood<4||this.costsClay<2||this.costsIron<0||this.costsGold<3||this.costsPeople<2)
+    	{
     		view.addText("You can't build anything!");
     		view.addText("GAME OVER!");
     	}

@@ -26,7 +26,8 @@ public class ClayPit extends Buildings
     // schoolMultiplicator is taken from special1 of the School Object and is used to calculate the time needed to build something new/level up
     public void newBuild(int wood, int clay, int iron, int gold, int people, int schoolMultiplicator, int castleMultiplicator)
     {
-    	if(this.costsWood<4||this.costsClay<2||this.costsIron<0||this.costsGold<3||this.costsPeople<2){
+    	if(this.costsWood<4||this.costsClay<2||this.costsIron<0||this.costsGold<3||this.costsPeople<2)
+    	{
     		view.addText("You can't build anything!");
     		view.addText("GAME OVER!");
     	}
