@@ -58,7 +58,7 @@ public class Forge extends Buildings
         User.materials[3]=gold;
         User.materials[4]=people;
 
-        view.addText("A forge has been built.\n");
+        view.addText("A FORGE has been built.\n");
         CasePrintouts.resources(view);
     }
 

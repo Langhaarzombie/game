@@ -27,8 +27,14 @@ public class School extends Buildings
     // for unique buildings newBuild = a level up
     // plusGoldCastle is taken from the castle object to calculate the amount of gold added
     // schoolMultiplicator is taken from special1 of the School Object and is used to calculate the time needed to build something new/level up
-    public void newBuild(int wood, int clay, int iron, int gold, int people){
+    public void newBuild(int wood, int clay, int iron, int gold, int people)
+    {
 
+    	if(this.costsWood<4||this.costsClay<2||this.costsIron<0||this.costsGold<3||this.costsPeople<2){
+    		view.addText("You can't build anything!");
+    		view.addText("GAME OVER!");
+    	}
+    	
         if(wood-this.costsWood<0||clay-this.costsClay<0||iron-this.costsIron<0||gold-this.costsGold<0||people-this.costsPeople<0)
         {
             view.addText("You do not have enough resources.\n"); 
@@ -62,7 +68,7 @@ public class School extends Buildings
         User.materials[3]=gold;
         User.materials[4]=people;
 
-        view.addText("The school has leveled up.\n");
+        view.addText("The SCHOOL has leveled up.\n");
         CasePrintouts.resources(view);
     }
 

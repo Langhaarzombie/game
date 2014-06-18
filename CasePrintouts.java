@@ -15,7 +15,7 @@ public class CasePrintouts
             view.setCursorWaiting();
             User.cottage.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getMultiplicator(), User.castle.getMultiplicator());
         }finally{
-            view.setCurorDefault();
+            view.setCursorDefault();
         }
     }
 
@@ -25,7 +25,7 @@ public class CasePrintouts
             view.setCursorWaiting();
             User.forester.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getMultiplicator(), User.castle.getMultiplicator());
         }finally{
-            view.setCurorDefault();
+            view.setCursorDefault();
         }
     }
 
@@ -35,7 +35,7 @@ public class CasePrintouts
             view.setCursorWaiting();
             User.forge.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getMultiplicator(), User.castle.getMultiplicator());
         }finally{
-            view.setCurorDefault();
+            view.setCursorDefault();
         }
     }
 
@@ -45,7 +45,7 @@ public class CasePrintouts
             view.setCursorWaiting();
             User.clayPit.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getMultiplicator(), User.castle.getMultiplicator());
         }finally{
-            view.setCurorDefault();
+            view.setCursorDefault();
         }
     }
 
@@ -55,7 +55,7 @@ public class CasePrintouts
             view.setCursorWaiting();
             User.school.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4]);
         }finally{
-            view.setCurorDefault();
+            view.setCursorDefault();
         }
     }
 
@@ -65,7 +65,7 @@ public class CasePrintouts
             view.setCursorWaiting();
             User.castle.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getMultiplicator());
         }finally{
-            view.setCurorDefault();
+            view.setCursorDefault();
         }
     }
 
@@ -75,7 +75,7 @@ public class CasePrintouts
             view.setCursorWaiting();
             User.barracks.newBuild(User.materials[0], User.materials[1], User.materials[2], User.materials[3], User.materials[4], User.school.getMultiplicator());
         }finally{
-            view.setCurorDefault();
+            view.setCursorDefault();
         }
     }
 
@@ -165,7 +165,7 @@ public class CasePrintouts
                 view.setCursorWaiting();
                 Thread.sleep(5000);
             }finally{
-                view.setCurorDefault();
+                view.setCursorDefault();
             }
         }
         catch (InterruptedException e) 

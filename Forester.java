@@ -58,7 +58,7 @@ public class Forester extends Buildings
         User.materials[3]=gold;
         User.materials[4]=people;
 
-        view.addText("A forester has been built.\n");
+        view.addText("A FORESTER has been built.\n");
         CasePrintouts.resources(view);
     }
 

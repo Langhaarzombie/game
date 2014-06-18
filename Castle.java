@@ -26,7 +26,11 @@ public class Castle extends Buildings
     // schoolMultiplicator is taken from special1 of the School Object and is used to calculate the time needed to build something new/level up
     public void newBuild(int wood, int clay, int iron, int gold, int people, int schoolMultiplicator)
     {
-
+    	//checks if it is possible to build any building
+if(this.costsWood<4||this.costsClay<2||this.costsIron<0||this.costsGold<3||this.costsPeople<2){
+	view.addText("You can't build anything!");
+	view.addText("GAME OVER!");
+}
         if(wood-this.costsWood<0||clay-this.costsClay<0||iron-this.costsIron<0||gold-this.costsGold<0||people-this.costsPeople<0)
         {
             view.addText("You do not have enough resources.\n"); 
@@ -57,7 +61,7 @@ public class Castle extends Buildings
         User.materials[3]=gold;
         User.materials[4]=people;
 
-        view.addText("The castle has leveled up.\n");
+        view.addText("The CASTLE has leveled up.\n");
         CasePrintouts.resources(view);
     }
 
@@ -65,6 +69,7 @@ public class Castle extends Buildings
     {
         return this.multiplicator;
     }
+    
 
     // method is used to get info about costs and plus of creating the building
     public void getInfo()

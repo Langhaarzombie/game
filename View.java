@@ -88,7 +88,7 @@ public class View extends JFrame
     }
 
     // cursor default
-    public void setCurorDefault(){
+    public void setCursorDefault(){
         setCursor(this.cursorDefault);
     }
 

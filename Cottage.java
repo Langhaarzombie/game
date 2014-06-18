@@ -57,7 +57,7 @@ public class Cottage extends Buildings
         User.materials[3]=gold;
         User.materials[4]=people;
 
-        view.addText("A cottage has been built.\n");
+        view.addText("A COTTAGE has been built.\n");
         CasePrintouts.resources(view);
     }
 
