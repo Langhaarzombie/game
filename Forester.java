@@ -8,7 +8,7 @@ public class Forester extends Buildings
     }
     
    // method for level up of the user, increasing costs and plus
-    //TODO levelUp!!!!!!!!!!! Jonas?
+    //TODO levelUp!!!!!!!!!!! into the building.java???!!!
     public void levelUp(int oldLevel, int newLevel)
     {
         if(this.amount<1) return;

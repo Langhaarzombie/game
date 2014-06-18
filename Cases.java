@@ -38,7 +38,7 @@ public class Cases
                 case "info": CasePrintouts.info(view); break;
                 case "electking": CasePrintouts.electking(view); break;
                 case "clear": CasePrintouts.clear(view); break;
-                default: view.addText(choice + " is not a command"); break;
+                default: view.addText(choice + " is not a command\n"); break;
         }//switch
     }//method
 }
