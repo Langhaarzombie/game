@@ -30,7 +30,7 @@ public class View extends JFrame
         ta=new JTextArea(20,50);
         ta.setBackground(Color.black);
         ta.setForeground(Color.white);
-        ta.setText("Start Game");
+        //ta.setText("Start Game");
         ta.setEnabled(false);
         ta.setLineWrap(true);
         jsp=new JScrollPane(ta);
