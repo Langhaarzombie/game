@@ -27,7 +27,7 @@ public class View extends JFrame
     {
         this.mkl=new MyKeyListener(user);
         panel=new JPanel(new FlowLayout());
-        ta=new JTextArea(20,50);
+        ta=new JTextArea(27,70);
         ta.setBackground(Color.black);
         ta.setForeground(Color.white);
         //ta.setText("Start Game");
@@ -35,7 +35,7 @@ public class View extends JFrame
         ta.setLineWrap(true);
         jsp=new JScrollPane(ta);
         jsp.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-        tf=new JTextField(50);
+        tf=new JTextField(70);
         tf.setBackground(Color.black);
         tf.setForeground(Color.white);
         add(panel);
@@ -48,7 +48,7 @@ public class View extends JFrame
         fchooser=new JFileChooser();
 
         //panel.setBackground(Color.BLACK);
-        setMinimumSize(new Dimension(600,400));
+        setMinimumSize(new Dimension(800,500));
         setResizable(false);
         setTitle("Texitscha");
         setDefaultCloseOperation(EXIT_ON_CLOSE);

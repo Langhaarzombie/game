@@ -37,8 +37,8 @@ public class User
 		}
 
 		/*view.addText("Welcome to Texitscha! A text-adventure game.\n" + 
-					 "Created by Max, Michael and Jonas\n" +*/
-			   		 //view.addText("Please press any character to start the game.\n\n");
+					   "Created by Max, Michael and Jonas\n" +
+		view.addText("Please press any character to start the game.\n\n");*/
 		lbe.firstEntry(this.view);
 		Cases.cases(view);
 	}
