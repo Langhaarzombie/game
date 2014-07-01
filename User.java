@@ -6,8 +6,7 @@
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.util.*;
-import java.io.*;
+
 public class User
 {    
     public static Forester forester;
@@ -21,7 +20,6 @@ public class User
     public static int[] materials;
     private Generating generate;
     public View view;
-    private boolean goOn=false;
     public LogBookEntries lbe;
 
 	public User()
