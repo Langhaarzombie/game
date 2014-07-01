@@ -156,7 +156,7 @@ public class CasePrintouts
         }
     }
 
-    public static void clear(View view)
+    /*public static void clear(View view)
     {
         view.addText("Your savegame will now be deleted.");
         try
@@ -175,5 +175,5 @@ public class CasePrintouts
         }
 
         view.addText("Just kidding");
-    }
+    }*/
 }
