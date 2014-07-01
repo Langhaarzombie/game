@@ -135,7 +135,8 @@ public class CasePrintouts
 
     public static void info(View view)
     {
-        view.addText("Info:\n\nForester:\t"+User.forester.getAmount()+"\nClay Pit:\t"+User.clayPit.getAmount()+"\nForge:\t"+User.forge.getAmount()+"\nCottage:\t"+User.cottage.getAmount()+"\nCastle:\tLevel\t"+User.castle.getAmount()+"\nSchool:\tLevel\t"+User.school.getAmount()+"\nBarracks:\tLevel\t"+User.barracks.getAmount()+"\n\n");
+        //view.addText("Info:\n\nForester:\t"+User.forester.getAmount()+"\nClay Pit:\t"+User.clayPit.getAmount()+"\nForge:\t"+User.forge.getAmount()+"\nCottage:\t"+User.cottage.getAmount()+"\nCastle:\tLevel\t"+User.castle.getAmount()+"\nSchool:\tLevel\t"+User.school.getAmount()+"\nBarracks:\tLevel\t"+User.barracks.getAmount()+"\n\n");
+    	view.addText("Info:\n\nCottage:\t"+User.cottage.getAmount()+"\nForester:\t"+User.forester.getAmount()+"\nForge:\t"+User.forge.getAmount()+"\nClay Pit:\t"+User.clayPit.getAmount()+"\n\nSchool:\tLevel\t"+User.school.getAmount()+"\nCastle:\tLevel\t"+User.castle.getAmount()+"\nBarracks:\tLevel\t"+User.barracks.getAmount()+"\n\n");
     }
 
     // electking() actually not needed ... but still nice idea

@@ -35,7 +35,7 @@ public class View extends JFrame
         ta.setLineWrap(true);
         jsp=new JScrollPane(ta);
         jsp.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-        tf=new JTextField(70);
+        tf=new JTextField(65);
         tf.setBackground(Color.black);
         tf.setForeground(Color.white);
         add(panel);

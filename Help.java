@@ -29,6 +29,7 @@ public class Help
     {
         view.addText("\nWhat do you want to build?\n\n buildcottage\n buildforester\n buildforge\n buildclaypit\n buildschool\n buildcastle\n buildbarracks\n");  
     }
+    
     // maybe not needed
     /**
      * see where the user can go to
