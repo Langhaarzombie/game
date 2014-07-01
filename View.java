@@ -27,7 +27,7 @@ public class View extends JFrame
     {
         this.mkl=new MyKeyListener(user);
         panel=new JPanel(new FlowLayout());
-        ta=new JTextArea(27,70);
+        ta=new JTextArea(27,65);
         ta.setBackground(Color.black);
         ta.setForeground(Color.white);
         //ta.setText("Start Game");
