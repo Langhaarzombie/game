@@ -11,7 +11,8 @@ public class Cases
     {
         String choice = view.tf.getText();
         view.tf.setText("");
-
+        choice=choice.toLowerCase();
+        
         if(choice.length()>0)
             switch (choice)
             {
@@ -34,9 +35,9 @@ public class Cases
                 case "gotocastle": CasePrintouts.goToCastle(view); break;
                 case "gotoschool": CasePrintouts.goToSchool(view); break;
                 case "gotobarracks": CasePrintouts.goToBarracks(view); break;
+                case "exit": CasePrintouts.exit(view); break;
                 case "info": CasePrintouts.info(view); break;
                 case "electking": CasePrintouts.electking(view); break;
-                //case "clear": CasePrintouts.clear(view); break;
                 default: view.addText(choice + " is not a command\n"); break;
         }//switch
     }//method

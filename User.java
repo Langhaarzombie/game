@@ -34,22 +34,12 @@ public class User
 		    materials[i]=20;
 		}
 
-		/*view.addText("Welcome to Texitscha! A text-adventure game.\n" + 
-					   "Created by Max, Michael and Jonas\n" +
-		view.addText("Please press any character to start the game.\n\n");*/
 		lbe.firstEntry(this.view);
 		Cases.cases(view);
 	}
 
 	public void keyEvent(KeyEvent e)
 	{
-		/*if(!goOn)
-		{
-			goOn=true;
-			//view.addText("Now type help to see which commands there are.");
-			//lbe.firstEntry(this.view);
-		}*/
-
 		if(e.getKeyCode()==10)
 		{
 			Cases.cases(view); //call next method to make an input

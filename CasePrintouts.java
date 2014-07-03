@@ -127,6 +127,12 @@ public class CasePrintouts
         User.barracks.getInfo();
     }
 
+    // else
+    public static void exit(View view)
+    {
+        view.addText("You exited the program. See you later!");
+    }
+
     public static void info(View view)
     {
     	view.addText("Info:\n\nCottage:\t"+User.cottage.getAmount()+"\nForester:\t"+User.forester.getAmount()+"\nForge:\t"+User.forge.getAmount()+"\nClay Pit:\t"+User.clayPit.getAmount()+"\n\nSchool:\tLevel\t"+User.school.getAmount()+"\nCastle:\tLevel\t"+User.castle.getAmount()+"\nBarracks:\tLevel\t"+User.barracks.getAmount()+"\n\n");
