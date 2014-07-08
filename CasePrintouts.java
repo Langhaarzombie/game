@@ -149,25 +149,4 @@ public class CasePrintouts
             default: view.addText(" Please make a decision!"); break;
         }
     }
-
-    /*public static void clear(View view)
-    {
-        view.addText("Your savegame will now be deleted.");
-        try
-        {
-            try{
-                view.setCursorWaiting();
-                Thread.sleep(5000);
-            }finally{
-                view.setCursorDefault();
-            }
-        }
-        catch (InterruptedException e) 
-        {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-
-        view.addText("Just kidding");
-    }*/
 }
