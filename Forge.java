@@ -9,7 +9,7 @@ public class Forge extends Buildings
     
     
     //TODO levelUp!!! Jonas?
-    public void levelUp(int oldLevel, int newLevel)
+    /*public void levelUp(int oldLevel, int newLevel)
     {
         if(this.amount<1) return;
         
@@ -19,7 +19,7 @@ public class Forge extends Buildings
         // for plus
         
         
-    }
+    }*/
 
     // method is called if the user wants to build a new building, checked if enough materials available (if not return false), calculates the plus 
     // for unique buildings newBuild = a level up

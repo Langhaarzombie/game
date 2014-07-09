@@ -24,21 +24,22 @@ public class User
 
 	public User()
 	{
-		view= new View(this);
-		new Generating(view, this.forester, this. clayPit, this.forge, this.school, this.castle,this.cottage, this.barracks);
-		materials=new int[5];
+		view= new View (this);
+		new Generating (view, this.forester, this. clayPit, this.forge, this.school, this.castle,this.cottage, this.barracks);
+		materials=new int [5];
 		this.lbe=new LogBookEntries();
-		new MyKeyListener(this);
-		for(int i=0;i<materials.length;i++)
+		new MyKeyListener (this);
+
+		for (int i=0;i<materials.length;i++)
 		{
 		    materials[i]=20;
 		}
 
-		lbe.firstEntry(this.view);
-		Cases.cases(view);
+		lbe.firstEntry (this.View);
+		Cases.cases (view);
 	}
 
-	public void keyEvent(KeyEvent e)
+	public void keyEvent (KeyEvent e)
 	{
 		if(e.getKeyCode()==10)
 		{
