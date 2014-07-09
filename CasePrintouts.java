@@ -8,7 +8,7 @@
 public class CasePrintouts
 {    
 
-    //building something
+    //create buildings
     public static void buildCottage(View view)
     {
         try{
@@ -84,7 +84,7 @@ public class CasePrintouts
         view.addText("Resources:\n\nWood:\t"+User.materials[0]+"\nClay:\t"+User.materials[1]+"\nIron:\t"+User.materials[2]+"\nGold:\t"+User.materials[3]+"\nPeople:\t"+User.materials[4]+"\n\n");
     }
 
-    // go to
+    // goTo buildings
     public static void goToCottage(View view)
     {
         view.addText("Information about cottage:\n");
@@ -130,23 +130,5 @@ public class CasePrintouts
     public static void info(View view)
     {
     	view.addText("Info:\n\nCottage:\t"+User.cottage.getAmount()+"\nForester:\t"+User.forester.getAmount()+"\nForge:\t"+User.forge.getAmount()+"\nClay Pit:\t"+User.clayPit.getAmount()+"\n\nSchool:\tLevel\t"+User.school.getAmount()+"\nCastle:\tLevel\t"+User.castle.getAmount()+"\nBarracks:\tLevel\t"+User.barracks.getAmount()+"\n\n");
-    }
-
-    // electking() actually not needed ... but still nice idea
-    public static void electking(View view)
-    {
-        //check resources       
-        view.addText(" Are you sure you want to elect a... as the new king? y/n \n");
-
-        //char choice=scanking.next().toCharArray()[0];
-        String scanking = view.tf.getText();
-        view.tf.setText("");
-
-        switch (scanking)
-        {
-            case "y": view.addText(" The citizens celebrate the new king!"); break;
-            case "n": view.addText(" The king wasnÂ´t elected."); break;
-            default: view.addText(" Please make a decision!"); break;
-        }
     }
 }

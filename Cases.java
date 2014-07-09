@@ -36,7 +36,6 @@ public class Cases
                 case "gotoschool": CasePrintouts.goToSchool(view); break;
                 case "gotobarracks": CasePrintouts.goToBarracks(view); break;
                 case "info": CasePrintouts.info(view); break;
-                case "electking": CasePrintouts.electking(view); break;
                 default: view.addText(choice + " is not a command\n"); break;
         }//switch
     }//method
