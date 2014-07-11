@@ -35,7 +35,7 @@ public class User
 		    materials[i]=20;
 		}
 
-		lbe.firstEntry (this.View);
+		lbe.firstEntry (this.view);
 		Cases.cases (view);
 	}
 
