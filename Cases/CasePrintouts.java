@@ -131,4 +131,12 @@ public class CasePrintouts
     {
     	view.addText("Info:\n\nCottage:\t"+User.cottage.getAmount()+"\nForester:\t"+User.forester.getAmount()+"\nForge:\t"+User.forge.getAmount()+"\nClay Pit:\t"+User.clayPit.getAmount()+"\n\nSchool:\tLevel\t"+User.school.getAmount()+"\nCastle:\tLevel\t"+User.castle.getAmount()+"\nBarracks:\tLevel\t"+User.barracks.getAmount()+"\n\n");
     }
+
+    public static void recruitWarriors(View view){
+        view.addText("Which class shall the new warriors be in?");
+        String amountStr=view.tf.getText();
+        byte classW=Byte.valueOf(amountStr);
+        User.barracks.setAmountWarriorsTrained(view, classW);
+    }
+
 }
