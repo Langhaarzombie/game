@@ -5,14 +5,14 @@
  * @author Michael Bartl
  *
  */
-public class Cases 
+public class Cases
 {
     public static void cases(View view)
     {
         String choice = view.tf.getText();
         view.tf.setText("");
         choice=choice.toLowerCase();
-        
+
         if(choice.length()>0)
             switch (choice)
             {

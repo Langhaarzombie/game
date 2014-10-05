@@ -1,4 +1,4 @@
- 
+
 
 /**
  * class to see all the commands/cases that the user can type in
@@ -6,7 +6,7 @@
  *
  */
 
-public class Help 
+public class Help
 {
 
     /**
@@ -27,9 +27,9 @@ public class Help
      */
     public static void build(View view)
     {
-        view.addText("\nWhat do you want to build?\n\n buildcottage\n buildforester\n buildforge\n buildclaypit\n buildschool\n buildcastle\n buildbarracks\n");  
+        view.addText("\nWhat do you want to build?\n\n buildcottage\n buildforester\n buildforge\n buildclaypit\n buildschool\n buildcastle\n buildbarracks\n");
     }
-    
+
     // maybe not needed
     /**
      * see where the user can go to
