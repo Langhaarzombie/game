@@ -4,7 +4,7 @@
 
  /*
  The classes define the order in which the warriors are attacked, simple warriors are attacked before the warrior cl. 3 and die before them
-class: 	0 ... simple warriors
+class: 	0 ... simple warriors with equal life and strength
 		1 ... tanky ones with more life but less strength
 		2 ... strong ones with low life but higher strength
 		3 ... archers with low life but are attacked at last

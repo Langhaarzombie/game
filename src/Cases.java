@@ -11,6 +11,8 @@ public class Cases
     {
         String choice = view.tf.getText();
         view.tf.setText("");
+
+        //set the entered text to lowercase, so there wont be any problems with capital and non capital letters
         choice=choice.toLowerCase();
         
         if(choice.length()>0)
@@ -35,7 +37,7 @@ public class Cases
                 case "gotocastle": CasePrintouts.goToCastle(view); break;
                 case "gotoschool": CasePrintouts.goToSchool(view); break;
                 case "gotobarracks": CasePrintouts.goToBarracks(view); break;
-                case "recruitWarriors": CasePrintouts.recruitWarriors(view); break;
+                case "recruitwarriors": CasePrintouts.recruitWarriors(view); break;
                 case "info": CasePrintouts.info(view); break;
                 default: view.addText(choice + " is not a command\n"); break;
         }//switch

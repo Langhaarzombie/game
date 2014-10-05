@@ -19,6 +19,7 @@ public class Help
     				 " r - resources\n" +
     				 " build - create a building\n" +
                 	 " goto - go to a certain building\n" +
+                     "recruitwarriors - recruit new warriors\n" +
                 	 " exit - close program\n\n");
     }
 

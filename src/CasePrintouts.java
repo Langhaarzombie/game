@@ -135,8 +135,14 @@ public class CasePrintouts
     public static void recruitWarriors(View view){
         view.addText("Which class shall the new warriors be in?");
         String amountStr=view.tf.getText();
-        byte classW=Byte.valueOf(amountStr);
-        User.barracks.setAmountWarriorsTrained(view, classW);
+        
+        switch(amountStr){
+        case "0": User.barracks.setAmountWarriorsTrained(view, (byte) 0); break;
+        case "1": User.barracks.setAmountWarriorsTrained(view, (byte) 1); break;
+        case "2": User.barracks.setAmountWarriorsTrained(view, (byte) 2); break;
+        case "3": User.barracks.setAmountWarriorsTrained(view, (byte) 3); break;
+        }
+        
     }
 
 }

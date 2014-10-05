@@ -91,23 +91,22 @@ public class Barracks extends Buildings
     public void setAmountWarriorsTrained(View view, byte classW)
     {
         view.addText("How many warriors shall be created?");
+        
         String amountString=view.tf.getText();
-        for(int i=0;i<alphabet.length;i++)
-        {
-            amountString=amountString.replace(alphabet[i],' ');
-        }
-        
         int amountInt = Integer.parseInt(amountString);
-        learningWait(warriorMultiplicator, amountInt);
         
-        if(User.materials[4]-amountInt<0){
-            view.addText("You do not have enough people to recruit");
+        if((User.materials[4]-amountInt)<0){
+            view.addText("You do not have enough people to recruit.");
             return;
         }
+        
+        learningWait(warriorMultiplicator, amountInt);
         
         User.materials[4]=User.materials[4]-amountInt;
 
         createWarriors(amountInt, classW);
+
+        view.addText("The new warriors have been recruited.");
     }
 
     public void createWarriors(int amount, byte classW){
