@@ -5,6 +5,7 @@ public class Barracks extends Buildings
     private char[] alphabet={'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
     //TODO different types of warriors!!
     private int warriorMultiplicator;
+    private Warriors arrayWarriors[];
     private int amountWarriorTotal;
 
     public Barracks(View view, String name, int costsWood, int costsClay, int costsIron, int costsGold, int costsPeople, int plusGold)
@@ -12,6 +13,8 @@ public class Barracks extends Buildings
         super(view, name, costsWood, costsClay, costsClay, costsIron, costsPeople, 0, 0, 0, plusGold, 0);
         this.warriorMultiplicator=1000;
         this.amountWarriorTotal=9;
+        this.arrayWarriors=new Warriors[4];
+
     }
 
     // method for level up of the user, increasing costs and plus
@@ -32,12 +35,15 @@ public class Barracks extends Buildings
     // for unique buildings newBuild = a level up
     // plusGoldCastle is taken from the castle object to calculate the amount of gold added
     // schoolMultiplicator is taken from special1 of the School Object and is used to calculate the time needed to build something new/level up
+    // the max amount of warriors is increased
     public void newBuild(int wood, int clay, int iron, int gold, int people, int schoolMultiplicator)
     {
     	if(this.costsWood<4||this.costsClay<2||this.costsIron<0||this.costsGold<3||this.costsPeople<2)
     	{
-    		view.addText("You can't build anything!");
+    		view.addText("You do not have enough resources.\n");
+            view.addText("You can't build anything!");
     		view.addText("GAME OVER!");
+            return;
     	}
 
         if(wood-this.costsWood<0||clay-this.costsClay<0||iron-this.costsIron<0||gold-this.costsGold<0||people-this.costsPeople<0)
@@ -81,17 +87,41 @@ public class Barracks extends Buildings
         view.addText("Plus:\n\tWood:\t"+this.plusWood+"\n\tClay:\t"+this.plusClay+"\n\tIron:\t"+this.plusIron+"\n\tGold:\t"+this.plusGold+"\n\tPeople:\t"+this.plusPeople+"\n");
         view.addText("Amount:\t"+this.amount+"\n\n");
     }
+<<<<<<< HEAD:Buildings/Barracks.java
 
     public void setAmountWarriorsTrained(View view)
+=======
+    
+    public void setAmountWarriorsTrained(View view, byte classW)
+>>>>>>> 38551f9da4c4b986aca8deff015dea7aaf19d9b0:src/Barracks.java
     {
+        view.addText("How many warriors shall be created?");
+        
         String amountString=view.tf.getText();
-        for(int i=0;i<alphabet.length;i++)
-        {
-            amountString=amountString.replace(alphabet[i],' ');
+        int amountInt = Integer.parseInt(amountString);
+        
+        if((User.materials[4]-amountInt)<0){
+            view.addText("You do not have enough people to recruit.");
+            return;
         }
+<<<<<<< HEAD:Buildings/Barracks.java
 
         int amountInt = Integer.parseInt(amountString);
+=======
+        
+>>>>>>> 38551f9da4c4b986aca8deff015dea7aaf19d9b0:src/Barracks.java
         learningWait(warriorMultiplicator, amountInt);
-        amountWarriorTotal+=amountInt;
+        
+        User.materials[4]=User.materials[4]-amountInt;
+
+        createWarriors(amountInt, classW);
+
+        view.addText("The new warriors have been recruited.");
+    }
+
+    public void createWarriors(int amount, byte classW){
+        //TODO ceating warriors
+        this.arrayWarriors[classW].setAmount(this.arrayWarriors[classW].getAmount()+amount);
+
     }
 }

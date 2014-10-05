@@ -131,4 +131,18 @@ public class CasePrintouts
     {
     	view.addText("Info:\n\nCottage:\t"+User.cottage.getAmount()+"\nForester:\t"+User.forester.getAmount()+"\nForge:\t"+User.forge.getAmount()+"\nClay Pit:\t"+User.clayPit.getAmount()+"\n\nSchool:\tLevel\t"+User.school.getAmount()+"\nCastle:\tLevel\t"+User.castle.getAmount()+"\nBarracks:\tLevel\t"+User.barracks.getAmount()+"\n\n");
     }
+
+    public static void recruitWarriors(View view){
+        view.addText("Which class shall the new warriors be in?");
+        String amountStr=view.tf.getText();
+        
+        switch(amountStr){
+        case "0": User.barracks.setAmountWarriorsTrained(view, (byte) 0); break;
+        case "1": User.barracks.setAmountWarriorsTrained(view, (byte) 1); break;
+        case "2": User.barracks.setAmountWarriorsTrained(view, (byte) 2); break;
+        case "3": User.barracks.setAmountWarriorsTrained(view, (byte) 3); break;
+        }
+        
+    }
+
 }

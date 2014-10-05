@@ -166,7 +166,8 @@ public class Buildings
         this.name = name;
     }
 
-    // used if people are trained (it takes a time until the building can be built)
+    // used if people are trained (it takes a time until the building can be built) 
+    // is also used to define the time that is needed to train warriors
     public void learningWait(int multiplicator, int costs)
     {
         int time=multiplicator*costs;
