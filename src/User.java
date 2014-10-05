@@ -8,7 +8,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class User
-{
+{    
     public static Forester forester;
     public static ClayPit clayPit;
     public static Forge forge;
@@ -16,7 +16,7 @@ public class User
     public static Castle castle;
     public static Cottage cottage;
     public static Barracks barracks;
-
+    
     public static int[] materials;
     private Generating generate;
     public View view;

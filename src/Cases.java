@@ -5,7 +5,7 @@
  * @author Michael Bartl
  *
  */
-public class Cases
+public class Cases 
 {
     public static void cases(View view)
     {
@@ -14,7 +14,7 @@ public class Cases
 
         //set the entered text to lowercase, so there wont be any problems with capital and non capital letters
         choice=choice.toLowerCase();
-
+        
         if(choice.length()>0)
             switch (choice)
             {

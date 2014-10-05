@@ -7,7 +7,7 @@ public class Barracks extends Buildings
     private int warriorMultiplicator;
     private Warriors arrayWarriors[];
     private int amountWarriorTotal;
-
+    
     public Barracks(View view, String name, int costsWood, int costsClay, int costsIron, int costsGold, int costsPeople, int plusGold)
     {
         super(view, name, costsWood, costsClay, costsClay, costsIron, costsPeople, 0, 0, 0, plusGold, 0);
@@ -22,16 +22,16 @@ public class Barracks extends Buildings
     /*public void levelUp(int oldLevel, int newLevel)
     {
         if(this.amount<1) return;
-
+        
         // for costs
-
+        
 
         // for plus
-
-
+        
+        
     }*/
 
-    // method is called if the user wants to build a new building, checked if enough materials available (if not return false), calculates the plus
+    // method is called if the user wants to build a new building, checked if enough materials available (if not return false), calculates the plus 
     // for unique buildings newBuild = a level up
     // plusGoldCastle is taken from the castle object to calculate the amount of gold added
     // schoolMultiplicator is taken from special1 of the School Object and is used to calculate the time needed to build something new/level up
@@ -45,10 +45,10 @@ public class Barracks extends Buildings
     		view.addText("GAME OVER!");
             return;
     	}
-
+    	
         if(wood-this.costsWood<0||clay-this.costsClay<0||iron-this.costsIron<0||gold-this.costsGold<0||people-this.costsPeople<0)
         {
-            view.addText("You do not have enough resources.\n");
+            view.addText("You do not have enough resources.\n"); 
             return;
         }
 
@@ -87,13 +87,8 @@ public class Barracks extends Buildings
         view.addText("Plus:\n\tWood:\t"+this.plusWood+"\n\tClay:\t"+this.plusClay+"\n\tIron:\t"+this.plusIron+"\n\tGold:\t"+this.plusGold+"\n\tPeople:\t"+this.plusPeople+"\n");
         view.addText("Amount:\t"+this.amount+"\n\n");
     }
-<<<<<<< HEAD:Buildings/Barracks.java
-
-    public void setAmountWarriorsTrained(View view)
-=======
     
     public void setAmountWarriorsTrained(View view, byte classW)
->>>>>>> 38551f9da4c4b986aca8deff015dea7aaf19d9b0:src/Barracks.java
     {
         view.addText("How many warriors shall be created?");
         
@@ -104,12 +99,7 @@ public class Barracks extends Buildings
             view.addText("You do not have enough people to recruit.");
             return;
         }
-<<<<<<< HEAD:Buildings/Barracks.java
-
-        int amountInt = Integer.parseInt(amountString);
-=======
         
->>>>>>> 38551f9da4c4b986aca8deff015dea7aaf19d9b0:src/Barracks.java
         learningWait(warriorMultiplicator, amountInt);
         
         User.materials[4]=User.materials[4]-amountInt;
